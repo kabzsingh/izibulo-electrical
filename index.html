@@ -3,199 +3,197 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Izibulo Electrical — Residential &amp; Commercial Electrical Contractors</title>
+<title>Izibulo Electrical — Licensed Electrical Contractors in Midrand</title>
 <meta name="description" content="Izibulo Electrical — licensed, COC-certified electrical contractors serving Midrand and surrounds. Residential and commercial work, 24/7 emergency callouts.">
 <meta name="color-scheme" content="light only">
 <meta name="theme-color" content="#14213D">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2314213D'/%3E%3Cpath d='M13 5L7 13h4l-1 6 7-9h-4l1-5z' fill='%232F6FEB'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    color-scheme:light;
-    --navy:#14213D;
-    --navy-2:#1F2F52;
-    --blue:#2F6FEB;
-    --blue-light:#EAF1FE;
-    --slate:#5B6472;
-    --ink:#1B2130;
-    --paper:#FFFFFF;
-    --panel:#F6F8FB;
-    --line:#E3E8F0;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Inter',sans-serif;
-    line-height:1.55;
-    overflow-x:hidden;
-  }
-  h1,h2,h3,.display{
-    font-family:'Sora',sans-serif;
-    font-weight:700;
-    letter-spacing:-0.01em;
-    color:var(--navy);
-  }
-  .mono{font-family:'IBM Plex Mono',monospace;}
-  a{color:inherit;text-decoration:none;}
-  img,svg{display:block;}
-  :focus-visible{outline:3px solid var(--blue); outline-offset:2px;}
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+<div class="emergency-strip">
+  <div class="wrap">
+    <span><span class="dot"></span>24/7 emergency callouts across Midrand</span>
+    <a href="tel:+27110000000">Call now: 011 000 0000 →</a>
+  </div>
+</div>
 
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(255,255,255,0.92);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:16px 24px;max-width:1120px;margin:0 auto;
-  }
-  .brand{display:flex;align-items:center;gap:10px;font-size:1.1rem;color:var(--navy);font-weight:700;}
-  .brand .bolt{width:30px;height:30px;flex-shrink:0;}
-  .navlinks{display:flex;gap:30px;font-size:0.9rem;font-weight:600;color:var(--slate);}
-  .navlinks a{transition:color .15s;}
-  .navlinks a:hover{color:var(--blue);}
-  .cta-btn{
-    background:var(--blue);color:#fff;font-weight:600;
-    padding:11px 22px;font-size:0.86rem;border-radius:8px;
-    border:none;cursor:pointer;transition:transform .12s, background .15s, box-shadow .15s;
-    font-family:'Inter',sans-serif;
-    box-shadow:0 4px 14px rgba(47,111,235,0.28);
-  }
-  .cta-btn:hover{background:#255bd1;transform:translateY(-1px);}
-  .cta-btn.outline{
-    background:transparent;color:var(--navy);border:1.5px solid var(--line);box-shadow:none;
-  }
-  .cta-btn.outline:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light);}
-  .menu-toggle{
-    display:none;background:none;border:1px solid var(--line);border-radius:8px;
-    width:40px;height:40px;cursor:pointer;color:var(--navy);
-    align-items:center;justify-content:center;
-  }
-  .mobile-nav{
-    display:none;
-    position:fixed;top:65px;left:0;right:0;bottom:0;z-index:49;
-    background:#fff;padding:24px;
-    flex-direction:column;gap:4px;
-  }
-  .mobile-nav.open{display:flex;}
-  .mobile-nav a{
-    padding:16px 4px;font-size:1.05rem;font-weight:600;color:var(--navy);
-    border-bottom:1px solid var(--line);
-  }
-  .mobile-nav .cta-btn{margin-top:16px;text-align:center;}
+<header>
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <svg class="bolt" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#14213D"/><path d="M13 5L7 13h4l-1 6 7-9h-4l1-5z" fill="#2F6FEB"/></svg>
+      Izibulo Electrical
+    </a>
+    <div class="navlinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <span class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 011 000 0000</span>
+      <a href="contact.html" class="cta-btn">Get a quote<span class="arrow">→</span></a>
+    </div>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+  <div class="mobile-nav">
+    <div class="mn-top">
+      <span class="brand"><svg class="bolt" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#14213D"/><path d="M13 5L7 13h4l-1 6 7-9h-4l1-5z" fill="#2F6FEB"/></svg>Izibulo</span>
+      <button class="menu-toggle" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <span class="nav-phone">📞 011 000 0000</span>
+    <a href="contact.html" class="cta-btn">Get a quote</a>
+  </div>
+</header>
 
-  .hero{
-    position:relative;
-    padding:90px 24px 70px;
-    overflow:hidden;
-    background:linear-gradient(180deg, #FBFCFE 0%, #FFFFFF 100%);
-  }
-  .hero-inner{
-    max-width:1120px;margin:0 auto;
-    display:grid;grid-template-columns:1.05fr 0.95fr;gap:40px;align-items:center;
-  }
-  .hero-copy{text-align:left;}
-  .hero-visual{position:relative;}
-  .circuit-bg{
-    position:absolute; inset:0; width:100%; height:100%;
-    opacity:0.5; pointer-events:none;
-  }
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.08em;
-    color:var(--blue);text-transform:uppercase;margin-bottom:22px;
-    background:var(--blue-light);padding:7px 16px;border-radius:100px;font-weight:600;
-    position:relative;
-  }
-  .hero h1{
-    font-size:clamp(2rem, 4.4vw, 3.1rem);
-    line-height:1.1;
-    letter-spacing:-0.015em;
-    position:relative;
-  }
-  .hero h1 .accent{color:var(--blue);}
-  .hero p{
-    max-width:480px;margin:22px 0 34px;
-    color:var(--slate);font-size:1.06rem;
-    position:relative;
-  }
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;position:relative;}
-  .cta-btn .arrow{margin-left:8px;vertical-align:-2px;transition:transform .15s;}
-  .cta-btn:hover .arrow{transform:translateX(3px);}
+<section class="hero">
+  <div class="hero-inner wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Registered &amp; COC-certified</span>
+      <h1>Electrical work done <span class="accent">right</span>, signed off <span class="accent">properly.</span></h1>
+      <p>Izibulo Electrical handles residential and commercial installations, repairs, and emergency callouts across Midrand — every job backed by a valid Certificate of Compliance.</p>
+      <div class="hero-ctas">
+        <a href="contact.html" class="cta-btn">Request a quote<span class="arrow">→</span></a>
+        <a href="tel:+27110000000" class="cta-btn amber">Emergency callout</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="panel-graphic">
+        <div class="pg-head"><span>DB-01 · MAIN DISTRIBUTION</span><span class="dot"></span></div>
+        <div class="breaker-row"><div><span class="b-code">CB-01</span><span class="b-label">Residential installs</span></div><div class="switch on"></div></div>
+        <div class="breaker-row"><div><span class="b-code">CB-02</span><span class="b-label">Commercial fit-outs</span></div><div class="switch on"></div></div>
+        <div class="breaker-row"><div><span class="b-code">CB-03</span><span class="b-label">Fault finding &amp; repairs</span></div><div class="switch on"></div></div>
+        <div class="breaker-row"><div><span class="b-code">CB-04</span><span class="b-label">24/7 emergency response</span></div><div class="switch on"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  .stats{
-    display:grid;grid-template-columns:repeat(4,1fr);
-    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    background:var(--panel);
-  }
-  .stat{
-    padding:26px 16px;text-align:center;
-    border-right:1px solid var(--line);
-  }
-  .stat:last-child{border-right:none;}
-  .stat .num{
-    font-family:'IBM Plex Mono',monospace;font-weight:600;
-    font-size:1.15rem;color:var(--blue);
-  }
-  .stat .label{
-    font-size:0.78rem;
-    color:var(--slate);margin-top:5px;
-  }
+<div class="stats">
+  <div class="stat"><div class="num">15+ yrs</div><div class="label">In business</div></div>
+  <div class="stat"><div class="num">2,400+</div><div class="label">COC certificates issued</div></div>
+  <div class="stat"><div class="num">&lt; 60 min</div><div class="label">Avg. emergency response</div></div>
+  <div class="stat"><div class="num">100%</div><div class="label">Registered &amp; insured</div></div>
+</div>
 
-  .section{padding:88px 24px;}
-  .section-head{max-width:620px;margin:0 auto 52px;text-align:center;}
-  .section-head .tag{
-    font-family:'IBM Plex Mono',monospace;color:var(--blue);
-    font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;
-  }
-  .section-head h2{font-size:clamp(1.7rem,3.6vw,2.3rem);margin-top:12px;}
-  .section-head p{color:var(--slate);margin-top:14px;font-size:1.02rem;}
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">What we do</span>
+      <h2>One contractor, every circuit</h2>
+      <p>From a single faulty plug point to a full commercial rewire, our team is qualified for it — and every job leaves you with the paperwork to prove it's safe.</p>
+    </div>
+    <div class="plates">
+      <div class="plate">
+        <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>Residential</h3>
+        <div class="subhead">HOUSES · TOWNHOUSES · ESTATES</div>
+        <ul>
+          <li><span class="b">▸</span>New builds &amp; renovations</li>
+          <li><span class="b">▸</span>DB board upgrades</li>
+          <li><span class="b">▸</span>Geyser &amp; stove circuits</li>
+          <li><span class="b">▸</span>Outdoor lighting &amp; plugs</li>
+        </ul>
+        <a href="services.html#residential" class="plate-cta">See residential services →</a>
+      </div>
+      <div class="plate">
+        <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1M14 9h1M9 13h1M14 13h1M9 17h1M14 17h1"/></svg></div>
+        <h3>Commercial</h3>
+        <div class="subhead">OFFICES · RETAIL · WAREHOUSES</div>
+        <ul>
+          <li><span class="b">▸</span>Office &amp; shop fit-outs</li>
+          <li><span class="b">▸</span>Three-phase installations</li>
+          <li><span class="b">▸</span>Backup power &amp; changeovers</li>
+          <li><span class="b">▸</span>Compliance audits</li>
+        </ul>
+        <a href="services.html#commercial" class="plate-cta">See commercial services →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  .plates{
-    display:grid;grid-template-columns:1fr 1fr;gap:24px;
-    max-width:1000px;margin:0 auto;
-  }
-  .plate{
-    background:var(--paper);
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:36px 32px;
-    box-shadow:0 4px 24px rgba(20,33,61,0.06);
-    transition:box-shadow .2s, transform .2s;
-  }
-  .plate:hover{box-shadow:0 12px 36px rgba(20,33,61,0.1);transform:translateY(-3px);}
-  .plate .icon-wrap{
-    width:52px;height:52px;border-radius:12px;background:var(--blue-light);
-    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
-  }
-  .plate .icon{width:26px;height:26px;color:var(--blue);}
-  .plate h3{font-size:1.25rem;}
-  .plate .subhead{
-    font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--slate);
-    margin:6px 0 20px;
-  }
-  .plate ul{list-style:none;}
-  .plate li{
-    font-size:0.95rem;color:var(--ink);padding:10px 0;
-    border-top:1px solid var(--line);display:flex;gap:10px;align-items:flex-start;
-  }
-  .plate li:first-child{border-top:none;}
-  .plate li .b{color:var(--blue);flex-shrink:0;margin-top:1px;}
+<section class="section panel-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">How a job runs</span>
+      <h2>From first call to signed-off certificate</h2>
+      <p>Laid out the way it would appear on our own distribution board schedule — every job passes through the same four breakers.</p>
+    </div>
+    <div class="schedule">
+      <div class="schedule-head"><span>DISTRIBUTION BOARD SCHEDULE</span><span>DB-JOB / OUR PROCESS</span></div>
+      <div class="schedule-row"><div class="cb"><div class="code">CB-01</div><div class="amp">ENQUIRY</div></div><div class="desc"><h4>Tell us what's wrong</h4><p>Call, WhatsApp, or send the enquiry form — describe the issue or the scope of work.</p></div></div>
+      <div class="schedule-row"><div class="cb"><div class="code">CB-02</div><div class="amp">ASSESS &amp; QUOTE</div></div><div class="desc"><h4>Site visit &amp; written quote</h4><p>We inspect the site, scope the work, and send a clear, itemised quote before anything starts.</p></div></div>
+      <div class="schedule-row"><div class="cb"><div class="code">CB-03</div><div class="amp">INSTALL</div></div><div class="desc"><h4>Qualified electricians on site</h4><p>Work is carried out to SANS 10142 standard, with daily updates if the job runs multi-day.</p></div></div>
+      <div class="schedule-row"><div class="cb"><div class="code">CB-04</div><div class="amp">SIGN-OFF</div></div><div class="desc"><h4>Certificate of Compliance issued</h4><p>You receive your COC and any warranty documents — the job isn't done until the paperwork is.</p></div></div>
+    </div>
+  </div>
+</section>
 
-  .process{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
-    max-width:1000px;margin:0 auto;position:relative;
-  }
-  .process::before{
-    content:"";position:absolute;top:15px;left:12%;right:12%;height:1px;
-    background:var(--line);z-index:0;
-  }
-  .step{padding:0 20px;position:relative;z-index:1;}
-  .step .n{
-    width:30
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Trusted locally</span>
+      <h2>What Midrand homeowners &amp; businesses say</h2>
+    </div>
+    <div class="testimonials">
+      <div class="t-card"><div class="stars">★★★★★</div><p>Our geyser tripped the whole board on a Sunday night. Someone was out within the hour and had it sorted before midnight.</p><div class="who">— T. Naidoo, Noordwyk</div></div>
+      <div class="t-card"><div class="stars">★★★★★</div><p>Rewired our shop before opening. Quoted fairly, stuck to the timeline, and the COC was ready the same week.</p><div class="who">— L. Mokoena, Kyalami Business Park</div></div>
+      <div class="t-card"><div class="stars">★★★★★</div><p>Upgraded our DB board and added an outdoor circuit. Tidy work, and they explained every step.</p><div class="who">— R. van Zyl, Blue Hills</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="wrap">
+    <div class="cta-banner">
+      <div class="cb-copy">
+        <h2>Power problem today? We're on call around the clock.</h2>
+        <p>Emergency callouts across Midrand, Kyalami, Noordwyk, and surrounds — every visit backed by proper certification.</p>
+      </div>
+      <div class="cb-actions">
+        <a href="tel:+27110000000" class="cta-btn amber">Call the emergency line</a>
+        <a href="contact.html" class="cta-btn outline" style="color:#fff;border-color:rgba(255,255,255,0.3);">Request a quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-brand"><svg class="bolt" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#2F6FEB"/><path d="M13 5L7 13h4l-1 6 7-9h-4l1-5z" fill="#fff"/></svg>Izibulo Electrical</div>
+      <p>Licensed, COC-certified electrical contractors serving Midrand and surrounds since 2011.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul><li><a href="services.html#residential">Residential</a></li><li><a href="services.html#commercial">Commercial</a></li><li><a href="services.html#emergency">Emergency callouts</a></li><li><a href="services.html#coc">COC certificates</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul><li><a href="tel:+27110000000">011 000 0000</a></li><li><a href="mailto:info@izibuloelectrical.co.za">info@izibuloelectrical.co.za</a></li><li>Midrand, Gauteng</li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span class="js-year"></span> Izibulo Electrical. All rights reserved.</span>
+    <span>Registered electrical contractor · Reg. No. ECX000000</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
