@@ -23,13 +23,36 @@ document.addEventListener('DOMContentLoaded', function () {
     el.textContent = new Date().getFullYear();
   });
 
-  // Breaker switches on home hero — small ambient motion
+  // Scroll reveal for sections, respecting reduced-motion preference
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      revealEls.forEach(function (el) { el.classList.add('in'); });
+    } else {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(function (el) { observer.observe(el); });
+    }
+  }
+
+  // Hero panel — a slow, subtle pulse on one breaker node at a time
   var switches = document.querySelectorAll('.panel-graphic .switch');
-  if (switches.length) {
+  if (switches.length && !prefersReducedMotion) {
     setInterval(function () {
       var idx = Math.floor(Math.random() * switches.length);
-      switches[idx].classList.toggle('on');
-    }, 2600);
+      switches[idx].style.transition = 'box-shadow .6s ease';
+      switches[idx].style.boxShadow = '0 0 0 5px rgba(184,112,62,0.32)';
+      setTimeout(function () {
+        switches[idx].style.boxShadow = '';
+      }, 900);
+    }, 2200);
   }
 
   // Contact form — build a mailto with the entered details (no backend on this site yet)
@@ -46,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (!name || !phone || !message) {
         status.textContent = 'Please fill in your name, phone number, and a short message.';
-        status.style.color = '#C0392B';
+        status.style.color = '#8C5228';
         status.classList.add('show');
         return;
       }
@@ -59,10 +82,10 @@ document.addEventListener('DOMContentLoaded', function () {
         'Service needed: ' + service + '\n\n' +
         message
       );
-      window.location.href = 'mailto:info@izibuloelectrical.co.za?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:kabirsingh@ymail.com?subject=' + subject + '&body=' + body;
 
       status.textContent = 'Opening your email app to send this through — if nothing opens, call us instead.';
-      status.style.color = '#1F7A4D';
+      status.style.color = '#4A6B4E';
       status.classList.add('show');
     });
   }
