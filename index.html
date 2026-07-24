@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Izibulo Electrical — Residential &amp; Commercial Electrical Contractors</title>
+<meta name="description" content="Izibulo Electrical — licensed, COC-certified electrical contractors serving Midrand and surrounds. Residential and commercial work, 24/7 emergency callouts.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2314213D'/%3E%3Cpath d='M13 5L7 13h4l-1 6 7-9h-4l1-5z' fill='%232F6FEB'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#14213D;
+    --navy-2:#1F2F52;
+    --blue:#2F6FEB;
+    --blue-light:#EAF1FE;
+    --slate:#5B6472;
+    --ink:#1B2130;
+    --paper:#FFFFFF;
+    --panel:#F6F8FB;
+    --line:#E3E8F0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Sora',sans-serif;
+    font-weight:700;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;}
+  :focus-visible{outline:3px solid var(--blue); outline-offset:2px;}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;max-width:1120px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-size:1.1rem;color:var(--navy);font-weight:700;}
+  .brand .bolt{width:30px;height:30px;flex-shrink:0;}
+  .navlinks{display:flex;gap:30px;font-size:0.9rem;font-weight:600;color:var(--slate);}
+  .navlinks a{transition:color .15s;}
+  .navlinks a:hover{color:var(--blue);}
+  .cta-btn{
+    background:var(--blue);color:#fff;font-weight:600;
+    padding:11px 22px;font-size:0.86rem;border-radius:8px;
+    border:none;cursor:pointer;transition:transform .12s, background .15s, box-shadow .15s;
+    font-family:'Inter',sans-serif;
+    box-shadow:0 4px 14px rgba(47,111,235,0.28);
+  }
+  .cta-btn:hover{background:#255bd1;transform:translateY(-1px);}
+  .cta-btn.outline{
+    background:transparent;color:var(--navy);border:1.5px solid var(--line);box-shadow:none;
+  }
+  .cta-btn.outline:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light);}
+  .menu-toggle{
+    display:none;background:none;border:1px solid var(--line);border-radius:8px;
+    width:40px;height:40px;cursor:pointer;color:var(--navy);
+    align-items:center;justify-content:center;
+  }
+  .mobile-nav{
+    display:none;
+    position:fixed;top:65px;left:0;right:0;bottom:0;z-index:49;
+    background:#fff;padding:24px;
+    flex-direction:column;gap:4px;
+  }
+  .mobile-nav.open{display:flex;}
+  .mobile-nav a{
+    padding:16px 4px;font-size:1.05rem;font-weight:600;color:var(--navy);
+    border-bottom:1px solid var(--line);
+  }
+  .mobile-nav .cta-btn{margin-top:16px;text-align:center;}
+
+  /* Hero */
+  .hero{
+    position:relative;
+    padding:90px 24px 70px;
+    overflow:hidden;
+    background:linear-gradient(180deg, #FBFCFE 0%, #FFFFFF 100%);
+  }
+  .hero-inner{
+    max-width:1120px;margin:0 auto;
+    display:grid;grid-template-columns:1.05fr 0.95fr;gap:40px;align-items:center;
+  }
+  .hero-copy{text-align:left;}
+  .hero-visual{position:relative;}
+  .circuit-bg{
+    position:absolute; inset:0; width:100%; height:100%;
+    opacity:0.5; pointer-events:none;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.08em;
+    color:var(--blue);text-transform:uppercase;margin-bottom:22px;
+    background:var(--blue-light);padding:7px 16px;border-radius:100px;font-weight:600;
+    position:relative;
+  }
+  .hero h1{
+    font-size:clamp(2rem, 4.4vw, 3.1rem);
+    line-height:1.1;
+    letter-spacing:-0.015em;
+    position:relative;
+  }
+  .hero h1 .accent{color:var(--blue);}
+  .hero p{
+    max-width:480px;margin:22px 0 34px;
+    color:var(--slate);font-size:1.06rem;
+    position:relative;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;position:relative;}
+  .cta-btn .arrow{margin-left:8px;vertical-align:-2px;transition:transform .15s;}
+  .cta-btn:hover .arrow{transform:translateX(3px);}
+
+  /* Stat / trust strip */
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--panel);
+  }
+  .stat{
+    padding:26px 16px;text-align:center;
+    border-right:1px solid var(--line);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .num{
+    font-family:'IBM Plex Mono',monospace;font-weight:600;
+    font-size:1.15rem;color:var(--blue);
+  }
+  .stat .label{
+    font-size:0.78rem;
+    color:var(--slate);margin-top:5px;
+  }
+
+  /* Section heading pattern */
+  .section{padding:88px 24px;}
+  .section-head{max-width:620px;margin:0 auto 52px;text-align:center;}
+  .section-head .tag{
+    font-family:'IBM Plex Mono',monospace;color:var(--blue);
+    font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;
+  }
+  .section-head h2{font-size:clamp(1.7rem,3.6vw,2.3rem);margin-top:12px;}
+  .section-head p{color:var(--slate);margin-top:14px;font-size:1.02rem;}
+
+  /* Service cards */
+  .plates{
+    display:grid;grid-template-columns:1fr 1fr;gap:24px;
+    max-width:1000px;margin:0 auto;
+  }
+  .plate{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:36px 32px;
+    box-shadow:0 4px 24px rgba(20,33,61,0.06);
+    transition:box-shadow .2s, transform .2s;
+  }
+  .plate:hover{box-shadow:0 12px 36px rgba(20,33,61,0.1);transform:translateY(-3px);}
+  .plate .icon-wrap{
+    width:52px;height:52px;border-radius:12px;background:var(--blue-light);
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  }
+  .plate .icon{width:26px;height:26px;color:var(--blue);}
+  .plate h3{font-size:1.25rem;}
+  .plate .subhead{
+    font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--slate);
+    margin:6px 0 20px;
+  }
+  .plate ul{list-style:none;}
+  .plate li{
+    font-size:0.95rem;color:var(--ink);padding:10px 0;
+    border-top:1px solid var(--line);display:flex;gap:10px;align-items:flex-start;
+  }
+  .plate li:first-child{border-top:none;}
+  .plate li .b{color:var(--blue);flex-shrink:0;margin-top:1px;}
+
+  /* Process */
+  .process{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    max-width:1000px;margin:0 auto;position:relative;
+  }
+  .process::before{
+    content:"";position:absolute;top:15px;left:12%;right:12%;height:1px;
+    background:var(--line);z-index:0;
+  }
+  .step{padding:0 20px;position:relative;z-index:1;}
+  .step .n{
+    width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:0.82rem;
+    margin-bottom:16px;
+  }
+  .step h3{font-size:1.05rem;margin-bottom:8px;}
+  .step p{font-size:0.9rem;color:var(--slate);}
+
+  /* Trust band */
+  .band{
+    background:var(--navy);
+    padding:64px 24px;text-align:center;color:#fff;
+  }
+  .band h2{color:#fff;font-size:clamp(1.5rem,3.2vw,2rem);max-width:640px;margin:0 auto 14px;}
+  .band p{color:#B9C3D9;max-width:560px;margin:0 auto;font-size:1.02rem;}
+
+  /* Contact */
+  .contact-section{background:var(--panel);}
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;
+    max-width:1000px;margin:0 auto;align-items:start;
+  }
+  .contact-info h3{font-size:1.3rem;margin-bottom:20px;}
+  .contact-line{
+    display:flex;gap:14px;align-items:flex-start;margin-bottom:22px;
+    font-size:0.96rem;
+  }
+  .contact-line .ic-wrap{
+    width:38px;height:38px;border-radius:10px;background:var(--blue-light);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .contact-line .ic{width:18px;height:18px;color:var(--blue);}
+  .contact-line .lab{color:var(--slate);font-size:0.76rem;text-transform:uppercase;letter-spacing:0.04em;display:block;margin-bottom:3px;font-weight:600;}
+  .contact-line a{color:var(--navy);font-weight:600;border-bottom:1px solid transparent;transition:border-color .15s, color .15s;}
+  .contact-line a:hover{color:var(--blue);border-color:var(--blue);}
+
+  form{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:30px;box-shadow:0 4px 24px rgba(20,33,61,0.06);}
+  .field{margin-bottom:16px;}
+  .field label{
+    display:block;font-size:0.8rem;font-weight:600;
+    color:var(--navy);margin-bottom:7px;
+  }
+  .field input, .field textarea{
+    width:100%;background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--ink);
+    padding:11px 13px;font-family:'Inter',sans-serif;font-size:0.92rem;
+  }
+  .field input:focus, .field textarea:focus{border-color:var(--blue);outline:none;background:#fff;}
+  .field textarea{resize:vertical;min-height:90px;}
+  form .cta-btn{width:100%;padding:13px;font-size:0.9rem;}
+
+  footer{
+    padding:40px 24px;text-align:center;color:var(--slate);font-size:0.85rem;
+    border-top:1px solid var(--line);background:var(--paper);
+  }
+  footer .brand{justify-content:center;margin-bottom:12px;}
+  footer .foot-contact{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--slate);}
+
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr; text-align:center;}
+    .hero-copy{text-align:center;}
+    .hero p{margin-left:auto; margin-right:auto;}
+    .hero-ctas{justify-content:center;}
+    .hero-visual{display:none;}
+  }
+  @media (max-width:780px){
+    .navlinks{display:none;}
+    .menu-toggle{display:flex;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .stat:nth-child(2){border-right:none;}
+    .plates{grid-template-columns:1fr;}
+    .process{grid-template-columns:1fr;gap:32px;}
+    .process::before{display:none;}
+    .contact-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand display">
+      <svg class="bolt" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#14213D"/><path d="M13 5L7 13h4l-1 6 7-9h-4l1-5z" fill="#2F6FEB"/></svg>
+      Izibulo Electrical
+    </div>
+    <nav class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="cta-btn" style="display:inline-block;">Get a Quote</a>
+    <button class="menu-toggle" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="Toggle menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mnav">
+    <a href="#services" onclick="document.getElementById('mnav').classList.remove('open')">Services</a>
+    <a href="#process" onclick="document.getElementById('mnav').classList.remove('open')">Process</a>
+    <a href="#contact" onclick="document.getElementById('mnav').classList.remove('open')">Contact</a>
+    <a href="tel:+27738624909" class="cta-btn outline" style="text-align:center;">Call 073 862 4909</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Licensed &amp; COC Certified</span>
+      <h1>Electrical work you can<br><span class="accent">trust, signed to code.</span></h1>
+      <p>Izibulo Electrical handles residential and commercial jobs across Midrand — from a single faulty plug to a full site installation.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="cta-btn">Request a Quote <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline-block;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="tel:+27738624909" class="cta-btn outline">Call Now</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="0 0 420 380" width="100%" height="auto">
+        <rect x="30" y="20" width="360" height="340" rx="20" fill="#F6F8FB" stroke="#E3E8F0" stroke-width="1.5"/>
+        <rect x="70" y="60" width="120" height="86" rx="12" fill="#EAF1FE"/>
+        <path d="M118 84L100 108h14l-6 24 24-28h-14l6-20z" fill="#2F6FEB"/>
+        <rect x="210" y="60" width="140" height="36" rx="8" fill="#fff" stroke="#E3E8F0" stroke-width="1.5"/>
+        <rect x="222" y="72" width="60" height="12" rx="3" fill="#DCE4F0"/>
+        <rect x="210" y="106" width="140" height="36" rx="8" fill="#fff" stroke="#E3E8F0" stroke-width="1.5"/>
+        <rect x="222" y="118" width="90" height="12" rx="3" fill="#DCE4F0"/>
+        <rect x="70" y="170" width="280" height="1.5" fill="#E3E8F0"/>
+        <circle cx="95" cy="205" r="10" fill="#fff" stroke="#2F6FEB" stroke-width="2"/>
+        <path d="M91 205l3 3 6-6" stroke="#2F6FEB" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="118" y="198" width="110" height="14" rx="4" fill="#F1F4F9"/>
+        <circle cx="95" cy="240" r="10" fill="#fff" stroke="#2F6FEB" stroke-width="2"/>
+        <path d="M91 240l3 3 6-6" stroke="#2F6FEB" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="118" y="233" width="150" height="14" rx="4" fill="#F1F4F9"/>
+        <circle cx="95" cy="275" r="10" fill="#fff" stroke="#2F6FEB" stroke-width="2"/>
+        <path d="M91 275l3 3 6-6" stroke="#2F6FEB" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="118" y="268" width="90" height="14" rx="4" fill="#F1F4F9"/>
+        <rect x="255" y="192" width="95" height="100" rx="10" fill="#14213D"/>
+        <path d="M295 218L280 244h10l-5 20 20-28h-10l5-16z" fill="#F4B400"/>
+        <rect x="270" y="270" width="60" height="8" rx="4" fill="#2F6FEB" opacity="0.6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="num mono" style="display:flex;align-items:center;justify-content:center;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F6FEB" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><div class="label">Licensed &amp; insured</div></div>
+  <div class="stat"><div class="num mono" style="display:flex;align-items:center;justify-content:center;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F6FEB" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><div class="label">COC certified</div></div>
+  <div class="stat"><div class="num mono">24/7</div><div class="label">Emergency callout</div></div>
+  <div class="stat"><div class="num mono">Midrand</div><div class="label">Based &amp; local</div></div>
+</div>
+
+<section class="section" id="services">
+  <div class="section-head">
+    <span class="tag">What we do</span>
+    <h2>Built for homes. Ready for industry.</h2>
+    <p>Two service lines, one standard of work — every job signed off to code.</p>
+  </div>
+  <div class="plates">
+    <div class="plate">
+      <div class="icon-wrap">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+      </div>
+      <h3>Residential</h3>
+      <div class="subhead mono">Home &amp; property</div>
+      <ul>
+        <li><span class="b">＋</span> Fault finding &amp; repairs</li>
+        <li><span class="b">＋</span> DB board upgrades &amp; replacements</li>
+        <li><span class="b">＋</span> Rewiring &amp; new circuits</li>
+        <li><span class="b">＋</span> Lighting installation</li>
+        <li><span class="b">＋</span> Certificate of Compliance (COC)</li>
+      </ul>
+    </div>
+    <div class="plate">
+      <div class="icon-wrap">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18"/><path d="M5 21V8l6-4 6 4v13"/><path d="M9 21v-5h4v5"/><path d="M9 10h.01M13 10h.01M9 14h.01M13 14h.01"/></svg>
+      </div>
+      <h3>Commercial &amp; Industrial</h3>
+      <div class="subhead mono">Site &amp; facility</div>
+      <ul>
+        <li><span class="b">＋</span> New installations &amp; fit-outs</li>
+        <li><span class="b">＋</span> Maintenance contracts</li>
+        <li><span class="b">＋</span> Three-phase &amp; motor work</li>
+        <li><span class="b">＋</span> Compliance audits</li>
+        <li><span class="b">＋</span> Emergency breakdown callouts</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="section-head">
+    <span class="tag">Why Izibulo</span>
+    <h2>What working with us looks like</h2>
+  </div>
+  <div class="plates" style="grid-template-columns:repeat(3,1fr); max-width:1000px;">
+    <div class="plate" style="padding:28px 24px;">
+      <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+      <h3 style="font-size:1.1rem;">Upfront pricing</h3>
+      <p style="font-size:0.92rem; color:var(--slate); margin-top:8px;">You get a clear quote before any work starts — no surprise line items on the invoice.</p>
+    </div>
+    <div class="plate" style="padding:28px 24px;">
+      <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg></div>
+      <h3 style="font-size:1.1rem;">Code-compliant, every time</h3>
+      <p style="font-size:0.92rem; color:var(--slate); margin-top:8px;">All applicable work is signed off with a Certificate of Compliance, so you're covered.</p>
+    </div>
+    <div class="plate" style="padding:28px 24px;">
+      <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+      <h3 style="font-size:1.1rem;">Fast response</h3>
+      <p style="font-size:0.92rem; color:var(--slate); margin-top:8px;">Same-day quotes where possible, with a 24/7 line for genuine emergencies.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--paper); padding-top:64px; padding-bottom:64px; border-top:1px solid var(--line);">
+  <div style="max-width:640px; margin:0 auto; text-align:center;">
+    <svg width="30" height="24" viewBox="0 0 30 24" fill="none" style="margin:0 auto 20px;"><path d="M0 24V13.5C0 6 5 0 12 0v6c-3.5 0-6 2.5-6 6h6v12H0zm18 0V13.5C18 6 23 0 30 0v6c-3.5 0-6 2.5-6 6h6v12H18z" fill="#E3E8F0"/></svg>
+    <p style="font-size:1.2rem; color:var(--navy); font-weight:500; line-height:1.5;">[Client testimonial goes here — a short quote about the quality of work, reliability, or professionalism.]</p>
+    <p class="mono" style="margin-top:16px; color:var(--slate); font-size:0.85rem;">— [Client name], [Suburb]</p>
+  </div>
+</section>
+
+<section class="section" id="process" style="background:var(--panel); padding-top:88px; padding-bottom:88px;">
+  <div class="section-head">
+    <span class="tag">How it works</span>
+    <h2>From call-out to sign-off</h2>
+  </div>
+  <div class="process">
+    <div class="step">
+      <div class="n mono">1</div>
+      <h3>You call or send a job</h3>
+      <p>Tell us what's wrong or what you need built — we quote before we touch anything.</p>
+    </div>
+    <div class="step">
+      <div class="n mono">2</div>
+      <h3>We schedule the job</h3>
+      <p>A time that works for you, with an accurate arrival window.</p>
+    </div>
+    <div class="step">
+      <div class="n mono">3</div>
+      <h3>Work gets done</h3>
+      <p>Clean, code-compliant work — no shortcuts, no surprises on the invoice.</p>
+    </div>
+    <div class="step">
+      <div class="n mono">4</div>
+      <h3>Certificate issued</h3>
+      <p>Where applicable, you get a signed Certificate of Compliance for your records.</p>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <h2>Every job, signed off to code.</h2>
+  <p>Izibulo Electrical is fully licensed, insured, and issues Certificates of Compliance on all applicable work — so you've got the paperwork when you need it.</p>
+</div>
+
+<section class="section contact-section" id="contact">
+  <div class="section-head">
+    <span class="tag">Get in touch</span>
+    <h2>Request a quote</h2>
+    <p>Fill in the form or reach us directly — we usually respond within one working day.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Contact details</h3>
+      <div class="contact-line">
+        <div class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.902.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.908.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><span class="lab">Phone</span><a href="tel:+27738624909">073 862 4909</a></div>
+      </div>
+      <div class="contact-line">
+        <div class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+        <div><span class="lab">Email</span><a href="mailto:kabirsingh@ymail.com">kabirsingh@ymail.com</a></div>
+      </div>
+      <div class="contact-line">
+        <div class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><span class="lab">Service area</span>Midrand &amp; surrounds</div>
+      </div>
+      <div class="contact-line">
+        <div class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div><span class="lab">Hours</span>Mon–Fri, 7:30–17:00 · 24/7 emergency line</div>
+      </div>
+    </div>
+    <form onsubmit="return false;">
+      <div class="field"><label for="name">Name</label><input id="name" type="text" placeholder="Your name"></div>
+      <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" placeholder="Your phone number"></div>
+      <div class="field"><label for="job">Job details</label><textarea id="job" placeholder="Tell us what you need..."></textarea></div>
+      <button class="cta-btn" type="submit">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<footer style="padding:0;">
+  <div style="max-width:1120px; margin:0 auto; padding:56px 24px 32px; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; text-align:left;">
+    <div>
+      <div class="brand display" style="margin-bottom:14px;">
+        <svg class="bolt" viewBox="0 0 24 24" fill="none" width="24" height="24"><rect width="24" height="24" rx="6" fill="#14213D"/><path d="M13 5L7 13h4l-1 6 7-9h-4l1-5z" fill="#2F6FEB"/></svg>
+        Izibulo Electrical
+      </div>
+      <p style="color:var(--slate); font-size:0.9rem; max-width:280px;">Licensed &amp; COC-certified electrical contractors serving Midrand and surrounds — residential and commercial.</p>
+    </div>
+    <div>
+      <div style="font-weight:600; color:var(--navy); font-size:0.85rem; margin-bottom:14px;">Quick links</div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:0.9rem;">
+        <a href="#services" style="color:var(--slate);">Services</a>
+        <a href="#process" style="color:var(--slate);">Our process</a>
+        <a href="#contact" style="color:var(--slate);">Request a quote</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-weight:600; color:var(--navy); font-size:0.85rem; margin-bottom:14px;">Contact</div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:0.9rem;">
+        <a href="tel:+27738624909" style="color:var(--slate);">073 862 4909</a>
+        <a href="mailto:kabirsingh@ymail.com" style="color:var(--slate);">kabirsingh@ymail.com</a>
+        <span style="color:var(--slate);">Midrand &amp; surrounds</span>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid var(--line); padding:20px 24px; text-align:center; color:var(--slate); font-size:0.82rem;">
+    © 2026 Izibulo Electrical. Licensed &amp; COC certified electrical contractors.
+  </div>
+</footer>
+
+<style>
+  @media (max-width:780px){
+    footer > div:first-child{grid-template-columns:1fr !important; text-align:center !important;}
+    footer > div:first-child > div{margin:0 auto 24px;}
+    footer a, footer span{justify-content:center;}
+  }
+</style>
+
+</body>
+</html>
