@@ -1,14 +1,17 @@
 // Izibulo Electrical — shared behaviour
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Mobile nav toggle
-  var toggle = document.querySelector('.menu-toggle');
+  // Mobile nav toggle (there are two buttons sharing this class: the
+  // header hamburger to open it, and the X inside the drawer to close it)
+  var toggles = document.querySelectorAll('.menu-toggle');
   var mobileNav = document.querySelector('.mobile-nav');
-  if (toggle && mobileNav) {
-    toggle.addEventListener('click', function () {
-      var isOpen = mobileNav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+  if (toggles.length && mobileNav) {
+    toggles.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var isOpen = mobileNav.classList.toggle('open');
+        toggles.forEach(function (t) { t.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); });
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
     });
     mobileNav.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
