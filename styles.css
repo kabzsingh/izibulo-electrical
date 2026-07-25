@@ -207,7 +207,7 @@ header{
 
 /* ---------- Stats ---------- */
 .stats{
-  display:grid;grid-template-columns:repeat(4,1fr);
+  display:grid;grid-template-columns:repeat(3,1fr);
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   background:var(--panel);
 }
@@ -399,11 +399,11 @@ footer{background:var(--ink);color:#B8AD97;padding:64px 24px 30px;}
 @media (max-width:860px){
   .navlinks{display:none;}
   .nav-actions .nav-phone{display:none;}
+  .nav-actions .cta-btn{display:none;}
   .menu-toggle{display:flex;}
   .hero-inner{grid-template-columns:1fr;}
   .plates{grid-template-columns:1fr;}
-  .stats{grid-template-columns:repeat(2,1fr);}
-  .stat:nth-child(2){border-right:none;}
+  .stats{grid-template-columns:repeat(3,1fr);}
   .testimonials{grid-template-columns:1fr;}
   .card-grid{grid-template-columns:1fr;}
   .card-grid.two{grid-template-columns:1fr;}
@@ -414,7 +414,7 @@ footer{background:var(--ink);color:#B8AD97;padding:64px 24px 30px;}
 }
 @media (max-width:500px){
   .footer-grid{grid-template-columns:1fr;}
-  .stats{grid-template-columns:1fr 1fr;}
+  .stats{grid-template-columns:1fr;}
 }
 
 /* ---------- Photography ---------- */
