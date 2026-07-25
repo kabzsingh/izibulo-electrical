@@ -1,25 +1,9 @@
 // Izibulo Electrical — shared behaviour
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Mobile nav toggle (there are two buttons sharing this class: the
-  // header hamburger to open it, and the X inside the drawer to close it)
-  var toggles = document.querySelectorAll('.menu-toggle');
-  var mobileNav = document.querySelector('.mobile-nav');
-  if (toggles.length && mobileNav) {
-    toggles.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var isOpen = mobileNav.classList.toggle('open');
-        toggles.forEach(function (t) { t.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); });
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      });
-    });
-    mobileNav.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-  }
+  // Mobile nav open/close is now handled entirely by a CSS checkbox toggle
+  // (see .nav-toggle-input in styles.css) — no JS required, so it can't
+  // break even if this script fails to load or execute for any reason.
 
   // Footer year
   document.querySelectorAll('.js-year').forEach(function (el) {
