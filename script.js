@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'Service needed: ' + service + '\n\n' +
         message
       );
-      window.location.href = 'mailto:kabirsingh@ymail.com?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:izibuloelectrical@gmail.com?subject=' + subject + '&body=' + body;
 
       status.textContent = 'Opening your email app to send this through — if nothing opens, call us instead.';
       status.style.color = '#4A6B4E';
