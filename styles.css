@@ -83,13 +83,11 @@ header{
 }
 .nav{
   display:flex;align-items:center;justify-content:space-between;
-  padding:18px 24px;max-width:1160px;margin:0 auto;
+  padding:14px 24px;max-width:1160px;margin:0 auto;
 }
-.brand{display:flex;align-items:center;gap:11px;font-size:1.12rem;color:var(--cream-ink);font-weight:600;font-family:'Fraunces',serif;letter-spacing:-0.01em;}
-.brand .bolt{width:34px;height:34px;flex-shrink:0;object-fit:contain;display:block;}
-.brand-text{display:flex;flex-direction:column;line-height:1.15;}
-.brand-name{font-size:1rem;}
-.tagline{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:0.6rem;letter-spacing:0.14em;color:var(--copper);text-transform:uppercase;}
+.brand{display:flex;align-items:center;font-size:1.12rem;color:var(--cream-ink);font-weight:600;font-family:'Fraunces',serif;letter-spacing:-0.01em;}
+.brand-logo{height:78px;width:auto;display:block;object-fit:contain;}
+.brand-logo--sm{height:56px;}
 .navlinks{display:flex;gap:34px;font-size:0.85rem;font-weight:500;color:var(--slate);align-items:center;letter-spacing:0.02em;}
 .navlinks a{transition:color .15s;position:relative;padding:4px 0;}
 .navlinks a:hover{color:var(--copper);}
@@ -391,9 +389,8 @@ footer{background:var(--ink);color:#B8AD97;padding:64px 24px 30px;}
   display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:40px;
   max-width:1160px;margin:0 auto;padding-bottom:40px;border-bottom:1px solid rgba(242,183,5,0.2);
 }
-.footer-brand{display:flex;align-items:center;gap:11px;color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;}
-.footer-brand .bolt{width:28px;height:28px;object-fit:contain;display:block;}
-.footer-brand .brand-text{display:flex;flex-direction:column;line-height:1.2;}
+.footer-brand{display:flex;align-items:center;color:#fff;}
+.footer-brand .brand-logo{height:80px;}
 .footer-col h4{color:var(--copper);font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;font-family:'IBM Plex Mono',monospace;margin-bottom:18px;font-weight:600;}
 .footer-col p{font-size:0.9rem;margin-top:16px;color:#8F8571;}
 .footer-col ul li{margin-bottom:12px;}
