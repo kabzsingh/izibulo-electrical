@@ -115,10 +115,12 @@ header{
 .cta-btn:hover .arrow{transform:translateX(3px);}
 
 .menu-toggle{
-  display:none;background:none;border:1px solid var(--line);border-radius:3px;
-  width:40px;height:40px;cursor:pointer;color:var(--cream-ink);
-  align-items:center;justify-content:center;
+  display:none;background:none;border:none;
+  width:36px;height:36px;cursor:pointer;color:var(--cream-ink);
+  align-items:center;justify-content:center;opacity:0.85;
 }
+.menu-toggle:hover{opacity:1;}
+.menu-toggle svg{stroke-width:1.5;}
 .nav-toggle-input{
   position:absolute;opacity:0;width:0;height:0;pointer-events:none;
 }
@@ -408,6 +410,7 @@ footer{background:var(--ink);color:#B8AD97;padding:64px 24px 30px;}
   .nav-actions .cta-btn{display:none;}
   .menu-toggle{display:flex;}
   .brand-logo{height:52px;}
+  .hero{padding-top:48px;}
   .hero-inner{grid-template-columns:1fr;}
   .plates{grid-template-columns:1fr;}
   .stats{grid-template-columns:repeat(3,1fr);}
