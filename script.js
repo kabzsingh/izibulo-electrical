@@ -1,4 +1,4 @@
-// Izibulo Electrical — shared behaviour
+// Hydro Electric (Pty) Ltd — shared behaviour
 
 document.addEventListener('DOMContentLoaded', function () {
   // Mobile nav open/close is now handled entirely by a CSS checkbox toggle

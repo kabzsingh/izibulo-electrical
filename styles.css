@@ -1,5 +1,5 @@
 /* ============================================================
-   Izibulo Electrical — shared stylesheet (elegant / copper edition)
+   Hydro Electric (Pty) Ltd — shared stylesheet
    Tokens: ink #122820, ink-2 #1A3A2E, copper #C9A227, copper-deep #A6841E,
    copper-light #EAE0B8, paper #F7F6F0, panel #EEEDE1, line #DCDACB, slate #5E6659
    Type: Fraunces (display, serif), Inter (body), IBM Plex Mono (utility/labels)
@@ -478,3 +478,20 @@ footer{background:var(--ink);color:#B8AD97;padding:64px 24px 30px;}
   .about-photo-grid{grid-template-columns:1fr;}
   .about-photo-grid .apg-main,.about-photo-grid .apg-sub{height:240px;}
 }
+
+/* ---------- Text wordmark (replaces logo-full.png) ---------- */
+.wordmark{display:inline-flex;align-items:center;gap:12px;color:var(--cream-ink);line-height:1;}
+.wordmark .wm-mark{width:34px;height:42px;flex-shrink:0;color:var(--cream-ink);}
+.wordmark .wm-text{display:flex;flex-direction:column;gap:6px;}
+.wordmark .wm-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.55rem;letter-spacing:-0.015em;white-space:nowrap;}
+.wordmark .wm-sub{font-family:'Inter',sans-serif;font-weight:500;font-size:0.68rem;letter-spacing:0.04em;color:var(--copper);white-space:nowrap;}
+.wordmark--sm .wm-mark{width:26px;height:32px;}
+.wordmark--sm .wm-name{font-size:1.2rem;}
+.wordmark--sm .wm-sub{font-size:0.6rem;}
+.footer-brand .wordmark .wm-name{font-size:1.4rem;}
+@media (max-width:860px){
+  .wordmark .wm-mark{width:28px;height:34px;}
+  .wordmark .wm-name{font-size:1.25rem;}
+  .wordmark .wm-sub{font-size:0.62rem;}
+}
+.nav > .brand, .nav > .navlinks, .nav > .nav-actions{grid-row:1;}
