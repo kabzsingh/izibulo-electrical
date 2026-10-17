@@ -190,3 +190,4 @@ p{margin:0 0 1em}
   .cta-actions .btn,.form-actions .btn{flex:1 1 100%}
   .footer-grid{grid-template-columns:1fr}
 }
+.footer-reg{font-size:.88rem;color:#9FB4CA;line-height:1.6;margin:0}

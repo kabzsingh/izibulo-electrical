@@ -1,7 +1,7 @@
 // Hydro Electric (Pty) Ltd
 (function () {
   var WHATSAPP = '27738624909';
-  var EMAIL = 'izibuloelectrical@gmail.com';
+  var EMAIL = 'hydro.admin1@gmail.com';
 
   document.querySelectorAll('.js-year').forEach(function (el) {
     el.textContent = new Date().getFullYear();
