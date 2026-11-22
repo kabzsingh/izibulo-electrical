@@ -1,7 +1,7 @@
 /* Hydro Electric (Pty) Ltd — Jobflow look: slate bars, spark-amber and water-blue,
    Barlow Semi Condensed headings over IBM Plex Sans, live sparks & droplets. */
 :root{
-  color-scheme:light;
+  color-scheme:light dark;
   --paper:#F2F4F6; --white:#FFFFFF; --surface:#FFFFFF; --tint:#E9EEF3;
   --ink:#1B2430; --text:#2A3644; --muted:#5A6573; --line:#DDE2E8; --line-strong:#C6CDD6;
   --blue:#1F4E79; --blue-bright:#3A86FF; --blue-deep:#163A5B; --blue-soft:#E6EEF6;
@@ -51,7 +51,9 @@ p{margin:0 0 1em}
 @keyframes he-flick{0%,44%,56%,100%{opacity:1}48%{opacity:.3}52%{opacity:.8}}
 @keyframes he-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 .brand-text{display:flex;flex-direction:column;line-height:1}
-.brand-name{font-family:var(--head);font-weight:700;font-size:1.55rem;letter-spacing:.2px;background:linear-gradient(90deg,#FFC300,#FF8A00,#3A86FF,#2EC4B6,#FFC300);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:he-shift 10s linear infinite}
+.brand-name{font-family:var(--head);font-weight:700;font-size:1.55rem;letter-spacing:.2px;color:#fff}
+.bn-hydro{color:#5AA9FF}
+.bn-elec{color:#FFC300}
 @keyframes he-shift{to{background-position:300% 0}}
 .brand-sub{font-size:.78rem;color:#AEB8C4;margin-top:.3rem;font-weight:500}
 
@@ -116,7 +118,7 @@ p{margin:0 0 1em}
 .hero h1,.page-head h1{color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.5)}
 .hero .lead,.page-head .lead{color:#C9D3DE;text-shadow:0 1px 10px rgba(0,0,0,.6)}
 .hero-grid{display:grid;grid-template-columns:1.25fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.hero-copy h1{background:linear-gradient(90deg,#fff 0 60%,#FFD25A 80%,#7FB2FF);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+
 .hero-facts{list-style:none;padding:0;margin:1.75rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem}
 .hero-facts li{display:flex;align-items:center;gap:.45rem;font-weight:500;color:#E7ECF2;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:.4rem .85rem;border-radius:999px;font-size:.95rem;backdrop-filter:blur(4px)}
 .hero-facts .i{color:#FFC300}
@@ -251,3 +253,14 @@ p{margin:0 0 1em}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* ---------- Standout hero headline ---------- */
+.hero-title{color:#fff;font-size:clamp(2.9rem,9vw,5.2rem);font-weight:800;line-height:1.02;letter-spacing:-.01em;max-width:13ch;text-shadow:0 4px 24px rgba(0,0,0,.6)}
+.hl-water,.hl-spark{display:inline-block;position:relative}
+.hl-water{color:#5AA9FF;text-shadow:0 0 18px rgba(58,134,255,.75),0 0 42px rgba(58,134,255,.45);animation:he-glow-b 3.6s ease-in-out infinite}
+.hl-spark{color:#FFC300;text-shadow:0 0 18px rgba(255,170,0,.8),0 0 42px rgba(255,138,0,.5);animation:he-glow-y 2.8s ease-in-out infinite}
+.hl-team{position:relative;white-space:nowrap;color:#fff}
+.hl-team::after{content:"";position:absolute;left:0;right:.25em;bottom:.02em;height:.14em;border-radius:99px;background:linear-gradient(90deg,#FFC300,#FF8A00,#3A86FF,#2EC4B6);background-size:200% 100%;animation:he-bar 4s linear infinite;box-shadow:0 0 16px rgba(255,170,0,.5)}
+@keyframes he-glow-b{0%,100%{text-shadow:0 0 14px rgba(58,134,255,.6),0 0 34px rgba(58,134,255,.35)}50%{text-shadow:0 0 22px rgba(90,169,255,.95),0 0 56px rgba(58,134,255,.6)}}
+@keyframes he-glow-y{0%,100%{text-shadow:0 0 14px rgba(255,170,0,.65),0 0 34px rgba(255,138,0,.35)}45%{text-shadow:0 0 24px rgba(255,200,60,1),0 0 60px rgba(255,138,0,.65)}50%{text-shadow:0 0 6px rgba(255,170,0,.4)}55%{text-shadow:0 0 24px rgba(255,200,60,1),0 0 60px rgba(255,138,0,.65)}}
+@keyframes he-bar{to{background-position:200% 0}}
